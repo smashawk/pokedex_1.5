@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import axios from 'axios';
+// import axios from 'axios';
 import hiragana from '../data/hiragana.json';
 
 
@@ -19,58 +19,58 @@ class SearchPartner extends Component {
     };
   }
 
-  componentDidMount() {
-    this.httpClient = axios.create({
-        baseURL:'https://kadou.i.nijibox.net/api',
-        withCredentials:true,
-    });
-    this.loadAuth()
-        .then(()=>{
-          if(! this.state.isLogin){
-            return Promise.resolve();
-          }
-            return this.loadDepartments();
-        })
-        .catch((err)=>{
-            alert("APIがエラーを返しました\n\n" + err);
-        })
+  // componentDidMount() {
+  //   this.httpClient = axios.create({
+  //       baseURL:'https://kadou.i.nijibox.net/api',
+  //       withCredentials:true,
+  //   });
+  //   this.loadAuth()
+  //       .then(()=>{
+  //         if(! this.state.isLogin){
+  //           return Promise.resolve();
+  //         }
+  //           return this.loadDepartments();
+  //       })
+  //       .catch((err)=>{
+  //           alert("APIがエラーを返しました\n\n" + err);
+  //       })
 
-    ;
-  }
-  loadAuth(){
-    return this.httpClient.get('/auth' , {params:{callback:'https://smashawk.github.io/pokedex/'}})
-    .then(this.commonResponseHandling)
-    .then((result)=>{
-      if(result.is_login){
-        this.setState({isLogin:true});
-      }else if(result.auth_url){
-        window.location.href = result.auth_url;
-      }
-    });
-  }
-  loadDepartments(){
-    return this.httpClient.get('/who/departments/')
-    .then(this.commonResponseHandling)
-    .then((result)=>{
-      this.setState({departmentList : result});
-    })
-  }
-  loadUser(){
+  //   ;
+  // }
+  // loadAuth(){
+  //   return this.httpClient.get('/auth' , {params:{callback:'https://smashawk.github.io/pokedex/'}})
+  //   .then(this.commonResponseHandling)
+  //   .then((result)=>{
+  //     if(result.is_login){
+  //       this.setState({isLogin:true});
+  //     }else if(result.auth_url){
+  //       window.location.href = result.auth_url;
+  //     }
+  //   });
+  // }
+  // loadDepartments(){
+  //   return this.httpClient.get('/who/departments/')
+  //   .then(this.commonResponseHandling)
+  //   .then((result)=>{
+  //     this.setState({departmentList : result});
+  //   })
+  // }
+  // loadUser(){
 
-        return this.httpClient.get('/who/user/1')
-          .then(this.commonResponseHandling)
-          .then((result)=>{
-              this.setState({user : result});
-          console.log(this.state.user)
-          })
-  }
-  commonResponseHandling(res){
-      if(res.data.code !== "200"){
-          console.error(res.data.data);
-          return Promise.reject("API Error:" + res.data.data.message);
-      }
-      return Promise.resolve(res.data.data);
-  }
+  //       return this.httpClient.get('/who/user/1')
+  //         .then(this.commonResponseHandling)
+  //         .then((result)=>{
+  //             this.setState({user : result});
+  //         console.log(this.state.user)
+  //         })
+  // }
+  // commonResponseHandling(res){
+  //     if(res.data.code !== "200"){
+  //         console.error(res.data.data);
+  //         return Promise.reject("API Error:" + res.data.data.message);
+  //     }
+  //     return Promise.resolve(res.data.data);
+  // }
 
   decidePartner(e) {
     console.log('decidePartner')
@@ -167,7 +167,7 @@ class SearchPartner extends Component {
           <button onClick={e => this.decidePartner(e)}>決定</button>
         </div>
         <div className="outputArea">
-          <img src={this.state.user.item_list[0].photo_url} alt="" id="nijiImg" className="nijiImg" />
+          {/* <img src={this.state.user.item_list[0].photo_url} alt="" id="nijiImg" className="nijiImg" /> */}
           <div>
             <p id="partnerText" className="partnerText">{this.state.user.item_list[0].user_name}<span id="partnerSubText" className="partnerSubText">は</span>{this.props.normalArray[Number(this.state.resultNo) - 1].name}にきめた！</p>
             <div>
