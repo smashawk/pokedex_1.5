@@ -1,5 +1,23 @@
 [
   {
+    "no": 0,
+    "name": "?????",
+    "form": "",
+    "isMegaEvolution": false,
+    "evolutions": [2],
+    "types": ["???", "???"],
+    "abilities": ["しんりょく"],
+    "hiddenAbilities": ["ようりょくそ"],
+    "stats": {
+      "hp": 45,
+      "attack": 49,
+      "defence": 49,
+      "spAttack": 65,
+      "spDefence": 65,
+      "speed": 45
+    }
+  },
+  {
     "no": 1,
     "name": "フシギダネ",
     "form": "",

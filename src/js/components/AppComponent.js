@@ -1,10 +1,10 @@
 import React from 'react';
-// import data from '../data/pokemon_data.json';
 import SearchPokemon from "./SearchPokemonComponent";
 // import SearchType from './SearchType';
 // import SearchPartner from './SearchPartner';
+import data from '../../data/pokemon_data.json';
 
-const AppComponent = (props) => 
+const AppComponent = (props) => {
   // constructor() {
   //   super();
   //   this.state = {
@@ -18,14 +18,18 @@ const AppComponent = (props) =>
 
   //   this.createNormalArray();
   // }
+
+  const normalArray =[];
   
-  // createNormalArray() {
-  //   for(let i = 0; i<934; i++){
-  //     if(!(data[i].isMegaEvolution)&& !(data[i].form)) {
-  //       this.state.normalArray.push(data[i]);
-  //     }
-  //   }
-  // }
+  const createNormalArray = () => {
+    for(let i = 0; i<934; i++){
+      if(!(data[i].isMegaEvolution) && !(data[i].form)) {
+        normalArray.push(data[i]);
+      }
+    }
+  }
+
+  createNormalArray();
 
   // decidePokemon(e) {
 
@@ -136,7 +140,7 @@ const AppComponent = (props) =>
   
   
     
-      
+      return(
       <div className="App">
         <h1>ポケモン図鑑</h1>
 
@@ -153,9 +157,8 @@ const AppComponent = (props) =>
         <SearchPokemon
           decidePokemon={props.decidePokemon}
           number={props.number}
-          // errorText={this.state.errorText}
-          // normalArray={this.state.normalArray}
-          // inputNumber={this.state.inputNumber}
+          errorText={props.errorText}
+          normalArray={normalArray}
         />
 
         {/* <SearchType 
@@ -173,6 +176,8 @@ const AppComponent = (props) =>
         /> */}
 
       </div>
+      )
+}
 
 
 

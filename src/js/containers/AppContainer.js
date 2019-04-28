@@ -6,6 +6,7 @@ const mapStateToProps = state => ({
   count: state.count,
   message: state.message,
   number: state.number,
+  errorText: state.errorText,
 });
 
 const mapDispatchToProps = dispatch => {

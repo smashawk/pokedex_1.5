@@ -284,6 +284,8 @@ template {
   margin: 0 auto;
   vertical-align: middle;
   background: center / contain no-repeat; }
+  .img.imgNo0 {
+    background-image: url(../images/000_0.png); }
   .img.imgNo1 {
     background-image: url(../images/001_0.png); }
   .img.imgNo2 {

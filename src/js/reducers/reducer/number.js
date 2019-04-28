@@ -1,9 +1,9 @@
 const number = (state = 0, action) => {
   switch (action.type) {
-    case 'NUM':
+    case 'TRUE':
       return action.number;
     default:
-      return state;
+      return 0;
   }
 };
 

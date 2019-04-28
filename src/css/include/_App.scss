@@ -11,7 +11,7 @@
   margin: 0 auto;
   vertical-align: middle;
   background: center / contain no-repeat;
-  @for $No from 1 to 10 {
+  @for $No from 0 to 10 {
     &.imgNo#{$No} {
       background-image: url(../images/00#{$No}_0.png);
     }
