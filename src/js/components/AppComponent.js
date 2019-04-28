@@ -1,8 +1,12 @@
 import React from 'react';
+import IndexPage from "./indexComponent";
 import SearchPokemon from "./SearchPokemonComponent";
 // import SearchType from './SearchType';
 // import SearchPartner from './SearchPartner';
 import data from '../../data/pokemon_data.json';
+import { BrowserRouter, Link } from "react-router-dom";
+import Route from "react-router-dom/es/Route";
+import Switch from "react-router-dom/es/Switch";
 
 const AppComponent = (props) => {
   // constructor() {
@@ -109,31 +113,50 @@ const AppComponent = (props) => {
   
     
       return(
-      <div className="App">
-        <h1>ポケモン図鑑</h1>
-        <hr />
-        <SearchPokemon
-          decidePokemon={props.decidePokemon}
-          number={props.number}
-          errorText={props.errorText}
-          normalArray={normalArray}
-        />
+        <BrowserRouter>
+          <div className="App">
+            <header>
+              <nav>
+                <Link to="/">TOP</Link>/
+                <Link to="/search">図鑑ナンバー検索</Link>
+              </nav>
+            </header>
+            <main>
+              
+            <h1>ポケモン図鑑</h1>
+            <hr />
+            <Switch>
+              <Route exact path="/" component={IndexPage} />
+              <Route path="/search"
+                render={
+                  () => <SearchPokemon
+                    decidePokemon={props.decidePokemon}
+                    number={props.number}
+                    errorText={props.errorText}
+                    normalArray={normalArray}
+                  />
+                }
+              />
+            </Switch>
 
-        {/* <SearchType 
-          decideType={e => this.decideType(e)}
-          resetType={e => this.resetType(e)}
-          normalArray={this.state.normalArray}
-          typeArray={this.state.typeArray}
-          detailData={this.state.detailData}
-        /> */}
+              {/* <SearchType 
+                decideType={e => this.decideType(e)}
+                resetType={e => this.resetType(e)}
+                normalArray={this.state.normalArray}
+                typeArray={this.state.typeArray}
+                detailData={this.state.detailData}
+              /> */}
 
-        {/* <SearchPartner 
-          decidePartner={e => this.decidePartner(e)}
-          normalArray={this.state.normalArray}
-          resultNo={this.state.resultNo}
-        /> */}
+              {/* <SearchPartner 
+                decidePartner={e => this.decidePartner(e)}
+                normalArray={this.state.normalArray}
+                resultNo={this.state.resultNo}
+              /> */}
 
-      </div>
+            </main>
+
+          </div>
+        </BrowserRouter>
       )
 }
 
