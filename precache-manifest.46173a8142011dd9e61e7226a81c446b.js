@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/pokedex2/static/media/569_0.1e37688d.png"
   },
   {
-    "revision": "1e8fb4821a49ce2b1adf",
+    "revision": "cee2cf9eb9f57aab03d9",
     "url": "/pokedex2/static/css/main.ff0ad56e.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/pokedex2/static/js/runtime~main.93404200.js"
   },
   {
-    "revision": "0833782630d498dbb9fb",
-    "url": "/pokedex2/static/js/2.ed9dc558.chunk.js"
+    "revision": "4c3b8d1b7a6ffb624769",
+    "url": "/pokedex2/static/js/2.d1761fe8.chunk.js"
   },
   {
     "revision": "ce64ad2bcb31a616a2c86f19b8369aab",
@@ -52,44 +52,44 @@ self.__precacheManifest = [
     "url": "/pokedex2/static/media/089_0.f5ce48dc.png"
   },
   {
-    "revision": "5d1cb92f67061132a7462d2e5856268f",
-    "url": "/pokedex2/static/media/800_0.5d1cb92f.png"
-  },
-  {
     "revision": "dd4de3bbc4d1de17dbb6621bdb97226a",
     "url": "/pokedex2/static/media/797_0.dd4de3bb.png"
+  },
+  {
+    "revision": "5d1cb92f67061132a7462d2e5856268f",
+    "url": "/pokedex2/static/media/800_0.5d1cb92f.png"
   },
   {
     "revision": "96f8622a0f5656a96d496c3cbcb334af",
     "url": "/pokedex2/static/media/794_0.96f8622a.png"
   },
   {
-    "revision": "39937aa984a50c19f4df97d7e651e984",
-    "url": "/pokedex2/static/media/785_0.39937aa9.png"
-  },
-  {
     "revision": "46bf4c4b929f81492081ea40c6706eb7",
     "url": "/pokedex2/static/media/784_0.46bf4c4b.png"
+  },
+  {
+    "revision": "39937aa984a50c19f4df97d7e651e984",
+    "url": "/pokedex2/static/media/785_0.39937aa9.png"
   },
   {
     "revision": "22ca47646ba8ca3a49641f18b5e7cf43",
     "url": "/pokedex2/static/media/781_0.22ca4764.png"
   },
   {
-    "revision": "187bd0f0a91ac8b9ecfda4012262b57d",
-    "url": "/pokedex2/static/media/780_0.187bd0f0.png"
-  },
-  {
     "revision": "3a8fd67dc1d8cef97c6c9de45fab32da",
     "url": "/pokedex2/static/media/776_0.3a8fd67d.png"
   },
   {
-    "revision": "b19ebd5909e01f0a605b2674f102548d",
-    "url": "/pokedex2/static/media/768_0.b19ebd59.png"
+    "revision": "187bd0f0a91ac8b9ecfda4012262b57d",
+    "url": "/pokedex2/static/media/780_0.187bd0f0.png"
   },
   {
     "revision": "5239f7a645d015b0bd2eabb618df5136",
     "url": "/pokedex2/static/media/765_0.5239f7a6.png"
+  },
+  {
+    "revision": "b19ebd5909e01f0a605b2674f102548d",
+    "url": "/pokedex2/static/media/768_0.b19ebd59.png"
   },
   {
     "revision": "9302713734445c72ed3f2954b42a07d9",
@@ -132,24 +132,24 @@ self.__precacheManifest = [
     "url": "/pokedex2/static/media/697_0.49e86cb7.png"
   },
   {
-    "revision": "1ab6db4b08a00a25a0cbb2fe82a5a4d5",
-    "url": "/pokedex2/static/media/687_0.1ab6db4b.png"
-  },
-  {
     "revision": "7c93b354603d711ec0442ee05c679986",
     "url": "/pokedex2/static/media/689_0.7c93b354.png"
+  },
+  {
+    "revision": "1ab6db4b08a00a25a0cbb2fe82a5a4d5",
+    "url": "/pokedex2/static/media/687_0.1ab6db4b.png"
   },
   {
     "revision": "9a0c7f2870d0793ea4e2fc265f93c9b8",
     "url": "/pokedex2/static/media/675_0.9a0c7f28.png"
   },
   {
-    "revision": "0e9901523bd3fc48ac85046e50f84ce0",
-    "url": "/pokedex2/static/media/671_0.0e990152.png"
-  },
-  {
     "revision": "85d492d7e8981d2cf86f3db5587f65b9",
     "url": "/pokedex2/static/media/668_0.85d492d7.png"
+  },
+  {
+    "revision": "0e9901523bd3fc48ac85046e50f84ce0",
+    "url": "/pokedex2/static/media/671_0.0e990152.png"
   },
   {
     "revision": "98e63f82b029344c5bb203e882cb8bd9",
@@ -172,12 +172,12 @@ self.__precacheManifest = [
     "url": "/pokedex2/static/media/639_0.f7d53bac.png"
   },
   {
-    "revision": "5d12e77c6e879bc8aee9f002c6b65a9b",
-    "url": "/pokedex2/static/media/635_0.5d12e77c.png"
-  },
-  {
     "revision": "ab849205f2722a0a6c699b1d7ad883a5",
     "url": "/pokedex2/static/media/637_0.ab849205.png"
+  },
+  {
+    "revision": "5d12e77c6e879bc8aee9f002c6b65a9b",
+    "url": "/pokedex2/static/media/635_0.5d12e77c.png"
   },
   {
     "revision": "f489482fbd6f6a34c73579e3717ca0d7",
@@ -188,16 +188,16 @@ self.__precacheManifest = [
     "url": "/pokedex2/static/media/626_0.e5d1a0f8.png"
   },
   {
-    "revision": "0dab01f0a3e338504ef302a82ce8fa48",
-    "url": "/pokedex2/static/media/691_0.0dab01f0.png"
-  },
-  {
     "revision": "324d0bb4e3a12a15dcac0cf2428bc0ad",
     "url": "/pokedex2/static/media/643_0.324d0bb4.png"
   },
   {
     "revision": "d667ccd88cb6fb9a0a00e8fa68171f82",
     "url": "/pokedex2/static/media/644_0.d667ccd8.png"
+  },
+  {
+    "revision": "0dab01f0a3e338504ef302a82ce8fa48",
+    "url": "/pokedex2/static/media/691_0.0dab01f0.png"
   },
   {
     "revision": "e9785dcd92acf52418abb0585838756b",
@@ -228,8 +228,8 @@ self.__precacheManifest = [
     "url": "/pokedex2/static/media/571_0.f3fc76c1.png"
   },
   {
-    "revision": "1e8fb4821a49ce2b1adf",
-    "url": "/pokedex2/static/js/main.7a5c2d04.chunk.js"
+    "revision": "cee2cf9eb9f57aab03d9",
+    "url": "/pokedex2/static/js/main.9cb71872.chunk.js"
   },
   {
     "revision": "acb161a5ef31434fb8fc4ed75748d31a",
@@ -240,12 +240,12 @@ self.__precacheManifest = [
     "url": "/pokedex2/static/media/558_0.fbecb668.png"
   },
   {
-    "revision": "355d63269114bb0f3dbe8473100aa62e",
-    "url": "/pokedex2/static/media/553_0.355d6326.png"
-  },
-  {
     "revision": "2a00095912debc2aded0bcc7e9d5c420",
     "url": "/pokedex2/static/media/555_0.2a000959.png"
+  },
+  {
+    "revision": "355d63269114bb0f3dbe8473100aa62e",
+    "url": "/pokedex2/static/media/553_0.355d6326.png"
   },
   {
     "revision": "a7c29b93ba03c2c7957b59d953067f0e",
@@ -308,6 +308,10 @@ self.__precacheManifest = [
     "url": "/pokedex2/static/media/466_0.e0b9d274.png"
   },
   {
+    "revision": "612bfe1530b4aa221913af2a2625516a",
+    "url": "/pokedex2/static/media/465_0.612bfe15.png"
+  },
+  {
     "revision": "4a5c60f7a8eac7501663abce3f23f1a3",
     "url": "/pokedex2/static/media/460_0.4a5c60f7.png"
   },
@@ -318,10 +322,6 @@ self.__precacheManifest = [
   {
     "revision": "9d672a0b6ef2a03e3921cf6d3fcad735",
     "url": "/pokedex2/static/media/487_0.9d672a0b.png"
-  },
-  {
-    "revision": "612bfe1530b4aa221913af2a2625516a",
-    "url": "/pokedex2/static/media/465_0.612bfe15.png"
   },
   {
     "revision": "db6c955573ea6fbf8bf0f27b8167c928",
@@ -344,20 +344,16 @@ self.__precacheManifest = [
     "url": "/pokedex2/static/media/389_0.4ef0fb9c.png"
   },
   {
-    "revision": "47ddc6ff1855c69f957f6ba4b01b8506",
-    "url": "/pokedex2/static/media/379_0.47ddc6ff.png"
-  },
-  {
     "revision": "dd30d95eb246aa2b19e634bd83c5c149",
     "url": "/pokedex2/static/media/382_0.dd30d95e.png"
   },
   {
-    "revision": "acba42b3b84186c6a2ec6afc0e4c1199",
-    "url": "/pokedex2/static/media/377_0.acba42b3.png"
-  },
-  {
     "revision": "a50e6120248741cc98e3e58f362e625f",
     "url": "/pokedex2/static/media/383_0.a50e6120.png"
+  },
+  {
+    "revision": "47ddc6ff1855c69f957f6ba4b01b8506",
+    "url": "/pokedex2/static/media/379_0.47ddc6ff.png"
   },
   {
     "revision": "7bf7e585774d51083aae62c976d24a19",
@@ -366,6 +362,10 @@ self.__precacheManifest = [
   {
     "revision": "21691e8cff993cb475d70fe30ed35198",
     "url": "/pokedex2/static/media/373_0.21691e8c.png"
+  },
+  {
+    "revision": "acba42b3b84186c6a2ec6afc0e4c1199",
+    "url": "/pokedex2/static/media/377_0.acba42b3.png"
   },
   {
     "revision": "8dd818df6cbe7152361f7ae6b636ed57",
@@ -456,7 +456,7 @@ self.__precacheManifest = [
     "url": "/pokedex2/static/media/103_0.e9677bb9.png"
   },
   {
-    "revision": "ce51f58ea036df14b671e4e6b599c1af",
+    "revision": "288a4e516aaf705d16a65e7f2b50c611",
     "url": "/pokedex2/index.html"
   }
 ];
