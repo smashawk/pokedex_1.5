@@ -31,38 +31,6 @@ const AppComponent = (props) => {
 
   createNormalArray();
 
-  // decidePokemon(e) {
-
-  //   const inputTextValue = e.target.value;
-    
-  //   for(let i = 0; i<this.state.normalArray.length; i++) {
-  //       if(inputTextValue === this.state.normalArray[i].name) {
-
-  //         this.setState({
-  //           inputNumber: i + 1,
-  //           errorText: ''
-  //         });
-  //         break;
-
-  //       } else if(1 < inputTextValue && inputTextValue < 807) {
-
-  //         this.setState({
-  //           inputNumber: inputTextValue,
-  //           errorText: ''
-  //         });
-
-  //       } else {
-
-  //         this.setState({
-  //           inputNumber: '1',
-  //           errorText: '適切な数字or名前を入力してください。'
-  //         });
-
-  //       }
-  //   }
-
-
-  // }
 
   // decideType(e) {
 
@@ -143,17 +111,7 @@ const AppComponent = (props) => {
       return(
       <div className="App">
         <h1>ポケモン図鑑</h1>
-
-        <h2>カウント : {props.count}</h2>
-        <button onClick={props.addCount}>追加</button>
         <hr />
-        <p>{props.message}</p>
-        <div>
-          <input
-            type="text"
-            onChange={(e) => props.changeMessage(e.target.value)} />
-        </div>
-
         <SearchPokemon
           decidePokemon={props.decidePokemon}
           number={props.number}
