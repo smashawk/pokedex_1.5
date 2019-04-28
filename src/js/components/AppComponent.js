@@ -1,10 +1,10 @@
 import React from 'react';
 // import data from '../data/pokemon_data.json';
-// import SearchPokemon from "./SearchPokemon";
+import SearchPokemon from "./SearchPokemonComponent";
 // import SearchType from './SearchType';
 // import SearchPartner from './SearchPartner';
 
-const AppComponent = ({message, count, addCount, changeMessage}) => 
+const AppComponent = (props) => 
   // constructor() {
   //   super();
   //   this.state = {
@@ -140,22 +140,23 @@ const AppComponent = ({message, count, addCount, changeMessage}) =>
       <div className="App">
         <h1>ポケモン図鑑</h1>
 
-        <h2>カウント : {count}</h2>
-        <button onClick={addCount}>追加</button>
+        <h2>カウント : {props.count}</h2>
+        <button onClick={props.addCount}>追加</button>
         <hr />
-        <p>{message}</p>
+        <p>{props.message}</p>
         <div>
           <input
             type="text"
-            onChange={(e) => changeMessage(e.target.value)} />
+            onChange={(e) => props.changeMessage(e.target.value)} />
         </div>
 
-        {/* <SearchPokemon
-          decidePokemon={e => this.decidePokemon(e)}
-          errorText={this.state.errorText}
-          normalArray={this.state.normalArray}
-          inputNumber={this.state.inputNumber}
-        /> */}
+        <SearchPokemon
+          decidePokemon={props.decidePokemon}
+          number={props.number}
+          // errorText={this.state.errorText}
+          // normalArray={this.state.normalArray}
+          // inputNumber={this.state.inputNumber}
+        />
 
         {/* <SearchType 
           decideType={e => this.decideType(e)}
