@@ -118,7 +118,8 @@ const AppComponent = (props) => {
             <header>
               <nav>
                 <Link to="/">TOP</Link>/
-                <Link to="/search">図鑑ナンバー検索</Link>
+                <Link to="/search">図鑑ナンバー検索</Link>/
+                <Link to="/typesearch">タイプ検索</Link>
               </nav>
             </header>
             <main>
@@ -128,6 +129,16 @@ const AppComponent = (props) => {
             <Switch>
               <Route exact path="/" component={IndexPage} />
               <Route path="/search"
+                render={
+                  () => <SearchPokemon
+                    decidePokemon={props.decidePokemon}
+                    number={props.number}
+                    errorText={props.errorText}
+                    normalArray={normalArray}
+                  />
+                }
+              />
+              <Route path="/typesearch"
                 render={
                   () => <SearchPokemon
                     decidePokemon={props.decidePokemon}
