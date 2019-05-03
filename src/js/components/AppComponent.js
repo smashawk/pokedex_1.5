@@ -1,12 +1,10 @@
 import React from 'react';
 import IndexPage from "./indexComponent";
 import SearchPokemon from "./SearchPokemonComponent";
-// import SearchType from './SearchType';
+import TypeSearch from './typeSearchComponent';
 // import SearchPartner from './SearchPartner';
 import data from '../../data/pokemon_data.json';
-import { BrowserRouter, Link } from "react-router-dom";
-import Route from "react-router-dom/es/Route";
-import Switch from "react-router-dom/es/Switch";
+import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
 
 const AppComponent = (props) => {
   // constructor() {
@@ -34,84 +32,9 @@ const AppComponent = (props) => {
   }
 
   createNormalArray();
-
-
-  // decideType(e) {
-
-  //   // テキストを表示
-  //   this.showTypeText();
-
-  //   const typeSelector1Value = document.getElementById('typeSelector1').value;
-  //   const typeSelector2Value = document.getElementById('typeSelector2').value;
     
-  //   if( !(typeSelector1Value !== '-' && typeSelector2Value !== '-')) {
-  //     const typeArray = [];
-    
-  //       for(let i = 0; i<this.state.normalArray.length; i++){
-  //         for(let j = 0; j < 2; j++) {
-  //           if(this.state.normalArray[i].types[j] === typeSelector1Value || this.state.normalArray[i].types[j] === typeSelector2Value) {
-  //             typeArray.push({
-  //               key: i,
-  //               number: this.state.normalArray[i]
-  //             })
-  //           }
-  //         }
-  //       }
-  //       this.setState({
-  //         typeArray: typeArray
-  //       });
+  console.log('render')
 
-  //   } else {
-  //     const typeArray = [];
-  //     const subTypeArray = [];
-
-  //     for(let i = 0; i<this.state.normalArray.length; i++){
-  //       for(let j = 0; j < 2; j++) {
-  //         if(this.state.normalArray[i].types[j] === typeSelector1Value) {
-  //           typeArray.push({
-  //             key: i,
-  //             number: this.state.normalArray[i]
-  //           })
-  //         }
-  //       }
-  //     }
-
-  //     for(let i = 0; i<typeArray.length; i++){
-  //       for(let j = 0; j < 2; j++) {
-  //         if(typeArray[i].number.types[j] === typeSelector2Value) {
-  //           subTypeArray.push(typeArray[i])
-  //         }
-  //       }
-  //     }
-  //     this.setState({
-  //       typeArray: subTypeArray
-  //     });
-
-  //   }
-  // }
-  // showTypeText() {
-
-  //   const clickTypeText = document.getElementById('FnClickTypeText');
-  //   clickTypeText.classList.add("is-show");
-  // }
-  // removeTypeText() {
-
-  //   const clickTypeText = document.getElementById('FnClickTypeText');
-  //   clickTypeText.classList.remove("is-show");
-  // }
-  // resetType() {
-  //   const typeSelector1 = document.getElementById('typeSelector1');
-  //   const typeSelector2 = document.getElementById('typeSelector2');
-
-  //   typeSelector1.value = '-';
-  //   typeSelector2.value = '-';
-
-  //   this.decideType();
-  //   this.removeTypeText();
-  // }
-  
-  
-    
       return(
         <BrowserRouter>
           <div className="App">
@@ -140,10 +63,10 @@ const AppComponent = (props) => {
               />
               <Route path="/typesearch"
                 render={
-                  () => <SearchPokemon
-                    decidePokemon={props.decidePokemon}
-                    number={props.number}
-                    errorText={props.errorText}
+                  () => <TypeSearch
+                    decideType={props.decideType}
+                    poketype1={props.poketype1}
+                    poketype2={props.poketype2}
                     normalArray={normalArray}
                   />
                 }
