@@ -3,7 +3,7 @@ import IndexPage from "./indexComponent";
 import SearchPokemon from "./SearchPokemonComponent";
 import TypeSearch from './typeSearchComponent';
 // import SearchPartner from './SearchPartner';
-import data from '../../data/pokemon_data.json';
+// import data from '../../data/pokemon_data.json';
 import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
 
 const AppComponent = (props) => {
@@ -21,17 +21,17 @@ const AppComponent = (props) => {
   //   this.createNormalArray();
   // }
 
-  const normalArray =[];
+  // const normalArray =[];
   
-  const createNormalArray = () => {
-    for(let i = 0; i<934; i++){
-      if(!(data[i].isMegaEvolution) && !(data[i].form)) {
-        normalArray.push(data[i]);
-      }
-    }
-  }
+  // const createNormalArray = () => {
+  //   for(let i = 0; i<934; i++){
+  //     if(!(data[i].isMegaEvolution) && !(data[i].form)) {
+  //       normalArray.push(data[i]);
+  //     }
+  //   }
+  // }
 
-  createNormalArray();
+  // createNormalArray();
     
   console.log('render')
 
@@ -57,7 +57,7 @@ const AppComponent = (props) => {
                     decidePokemon={props.decidePokemon}
                     number={props.number}
                     errorText={props.errorText}
-                    normalArray={normalArray}
+                    // normalArray={normalArray}
                   />
                 }
               />
@@ -67,7 +67,7 @@ const AppComponent = (props) => {
                     decideType={props.decideType}
                     poketype1={props.poketype1}
                     poketype2={props.poketype2}
-                    normalArray={normalArray}
+                    // normalArray={normalArray}
                   />
                 }
               />

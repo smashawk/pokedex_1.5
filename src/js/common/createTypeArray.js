@@ -1,3 +1,5 @@
+import normalArray from '../common/createNormalArray'
+
 const createTypeArray = (props) => {
 
   let typeArray = [];
@@ -9,12 +11,12 @@ const createTypeArray = (props) => {
   // 単タイプもしくは指定なしの場合
   if( !(props.poketype1 !== '-' && props.poketype2 !== '-')) {
     console.log('-')
-    for(let i = 0; i<props.normalArray.length; i++){
+    for(let i = 0; i<normalArray.length; i++){
       for(let j = 0; j < 2; j++) {
-        if(props.normalArray[i].types[j] === props.poketype1 || props.normalArray[i].types[j] === props.poketype2) {
+        if(normalArray[i].types[j] === props.poketype1 || normalArray[i].types[j] === props.poketype2) {
           subTypeArray.push({
             key: i,
-            number: props.normalArray[i]
+            number: normalArray[i]
           })
         }
       }
@@ -24,12 +26,12 @@ const createTypeArray = (props) => {
 
 
     // 複数タイプの場合
-    for(let i = 0; i<props.normalArray.length; i++){
+    for(let i = 0; i<normalArray.length; i++){
       for(let j = 0; j < 2; j++) {
-        if(props.normalArray[i].types[j] === props.poketype1) {
+        if(normalArray[i].types[j] === props.poketype1) {
           typeArray.push({
             key: i,
-            number: props.normalArray[i]
+            number: normalArray[i]
           })
         }
       }
@@ -45,7 +47,7 @@ const createTypeArray = (props) => {
 
   }
 
-// console.log('normal',props.normalArray)
+// console.log('normal',normalArray)
 // console.log('type',typeArray)
 // console.log('subtype',subTypeArray)
 

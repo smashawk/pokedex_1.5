@@ -1,4 +1,5 @@
 import React from "react";
+import normalArray from '../common/createNormalArray'
 
 const SearchPokemon = (props) => {
 
@@ -22,11 +23,11 @@ const SearchPokemon = (props) => {
           <dt>図鑑番号</dt>
           <dd>{props.number}</dd>
           <dt>名前</dt>
-          <dd>{props.normalArray[props.number].name}</dd>
+          <dd>{normalArray[props.number].name}</dd>
           <dt>タイプ</dt>
           <dd>
-            <span>{props.normalArray[props.number].types[0]}</span>
-            <span>{props.normalArray[props.number].types[1]}</span>
+            <span>{normalArray[props.number].types[0]}</span>
+            <span>{normalArray[props.number].types[1]}</span>
           </dd>
         </dl>
         <div className={"img imgNo" + props.number}></div>
