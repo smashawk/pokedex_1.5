@@ -19,6 +19,18 @@ export const decideType = () => {
   )
 }
 
+export const showData = (id) => {
+
+  console.log('id', id)
+
+  return(
+    {
+      type: 'DATA',
+      id
+    }
+  )
+}
+
 export const resetType = () => ({
   type: 'RESET'
 })

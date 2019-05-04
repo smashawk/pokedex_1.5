@@ -39,6 +39,8 @@ const AppComponent = (props) => {
                   () => <TypeSearch
                     decideType={props.decideType}
                     subTypeArray={props.subTypeArray}
+                    showData={props.showData}
+                    id={props.id}
                   />
                 }
               />

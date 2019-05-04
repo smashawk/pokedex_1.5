@@ -4,58 +4,6 @@ import ShowData from './showDataComponent'
 
 const TypeSearch = (props) => {
 
-  // let typeArray = [];
-  // let subTypeArray = [];
-
-  // const subTypeArray = createTypeArray(props);
-
-  // const decideType = (e) => {
-
-  //   // テキストを表示
-  //   showTypeText();
-
-  //   const typeSelector1Value = document.getElementById('typeSelector1').value;
-  //   const typeSelector2Value = document.getElementById('typeSelector2').value;
-    
-  //   // reset
-  //   if( !(typeSelector1Value !== '-' && typeSelector2Value !== '-')) {
-    
-  //       for(let i = 0; i<props.normalArray.length; i++){
-  //         for(let j = 0; j < 2; j++) {
-  //           if(props.normalArray[i].types[j] === typeSelector1Value || props.normalArray[i].types[j] === typeSelector2Value) {
-  //             typeArray.push({
-  //               key: i,
-  //               number: props.normalArray[i]
-  //             })
-  //           }
-  //         }
-  //       }
-
-  //   } else {
-
-  //     for(let i = 0; i<props.normalArray.length; i++){
-  //       for(let j = 0; j < 2; j++) {
-  //         if(props.normalArray[i].types[j] === typeSelector1Value) {
-  //           typeArray.push({
-  //             key: i,
-  //             number: props.normalArray[i]
-  //           })
-  //         }
-  //       }
-  //     }
-
-  //     for(let i = 0; i<typeArray.length; i++){
-  //       for(let j = 0; j < 2; j++) {
-  //         if(typeArray[i].number.types[j] === typeSelector2Value) {
-  //           subTypeArray.push(typeArray[i])
-  //         }
-  //       }
-  //     }
-
-  //   }
-  //   console.log(typeArray)
-  // }
-
 
   // const showTypeText = () => {
 
@@ -84,7 +32,7 @@ const TypeSearch = (props) => {
         key={props.subTypeArray[i].key}
         id={props.subTypeArray[i].number.no}
         className={"imgIcon imgType imgNo" + props.subTypeArray[i].number.no}
-        // onClick={e => props.showData(e)}
+        onClick={e => props.showData(e.target.id)}
       >
       </li>
     );
@@ -141,9 +89,7 @@ const TypeSearch = (props) => {
     </div>
 
      <ShowData 
-      //  showData={e => this.showData(e)}
-      //  detailData={this.state.detailData}
-      //  normalArray={this.props.normalArray}
+       id={props.id}
      />
      
      <div>
