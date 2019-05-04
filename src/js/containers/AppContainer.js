@@ -5,8 +5,7 @@ import AppComponent from '../components/AppComponent';
 const mapStateToProps = state => ({
   number: state.number,
   errorText: state.errorText,
-  poketype1: state.poketype[0],
-  poketype2: state.poketype[1],
+  subTypeArray: state.subTypeArray
 });
 
 const mapDispatchToProps = dispatch => ({

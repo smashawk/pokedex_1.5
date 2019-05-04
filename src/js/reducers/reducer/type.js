@@ -1,10 +1,10 @@
-const poketype = (state = 0, action) => {
+const subTypeArray = (state = 0, action) => {
   switch (action.type) {
     case 'TYPE':
-      return [action.poketype1, action.poketype2];
+      return action.subTypeArray;
     default:
       return 0;
   }
 };
 
-export default poketype;
+export default subTypeArray;

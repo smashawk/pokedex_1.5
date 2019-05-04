@@ -1,3 +1,5 @@
+import createTypeArray from '../common/createTypeArray'
+
 export const decidePokemon = (number) => ({
   type: (number < 803 && 0 < number) || number == null ? 'TRUE': 'FALSE',
   number,
@@ -5,13 +7,14 @@ export const decidePokemon = (number) => ({
 })
 
 export const decideType = () => {
-  const typeSelector1Value = document.getElementById('typeSelector1').value;
-  const typeSelector2Value = document.getElementById('typeSelector2').value;
+
+  const subTypeArray = createTypeArray();
+  console.log('sub', subTypeArray)
+
   return(
     {
       type: 'TYPE',
-      poketype1: typeSelector1Value,
-      poketype2: typeSelector2Value,
+      subTypeArray
     }
   )
 }

@@ -1,13 +1,13 @@
 import React from "react";
 import ShowData from './showDataComponent'
-import createTypeArray from '../common/createTypeArray'
+// import createTypeArray from '../common/createTypeArray'
 
 const TypeSearch = (props) => {
 
   // let typeArray = [];
   // let subTypeArray = [];
 
-  const subTypeArray = createTypeArray(props);
+  // const subTypeArray = createTypeArray(props);
 
   // const decideType = (e) => {
 
@@ -78,18 +78,17 @@ const TypeSearch = (props) => {
   //   removeTypeText();
   // }
   const nodes = [];
-  for(let i = 0; i<subTypeArray.length; i++) {
+  for(let i = 0; i<props.subTypeArray.length; i++) {
     nodes.push(
       <li 
-        key={subTypeArray[i].key}
-        id={subTypeArray[i].number.no}
-        className={"imgIcon imgType imgNo" + subTypeArray[i].number.no}
+        key={props.subTypeArray[i].key}
+        id={props.subTypeArray[i].number.no}
+        className={"imgIcon imgType imgNo" + props.subTypeArray[i].number.no}
         // onClick={e => props.showData(e)}
       >
       </li>
     );
   }
-  console.log(subTypeArray)
 
   return(
     
@@ -138,8 +137,6 @@ const TypeSearch = (props) => {
           <option>はがね</option>
           <option>フェアリー</option>
         </select>
-        <p>poketype{props.poketype1}</p>
-        <p>poketype{props.poketype2}</p>
       {/* <button onClick={e => resetType(e)} className="resetType">タイプリセット</button> */}
     </div>
 
