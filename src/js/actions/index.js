@@ -1,4 +1,5 @@
 import createTypeArray from '../common/createTypeArray'
+import decideResultNo from '../common/decideResultNo'
 
 export const decidePokemon = (number) => ({
   type: (number < 803 && 0 < number) || number == null ? 'TRUE': 'FALSE',
@@ -27,6 +28,18 @@ export const showData = (id) => {
     {
       type: 'DATA',
       id
+    }
+  )
+}
+
+export const decidePartner = () => {
+
+  const resultNo = decideResultNo();
+
+  return(
+    {
+      type: 'PARTNER',
+      resultNo
     }
   )
 }

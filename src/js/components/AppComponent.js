@@ -2,7 +2,7 @@ import React from 'react';
 import IndexPage from "./indexComponent";
 import SearchPokemon from "./SearchPokemonComponent";
 import TypeSearch from './typeSearchComponent';
-// import SearchPartner from './SearchPartner';
+import SearchPartner from './SearchPartnerComponent';
 import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
 
 const AppComponent = (props) => {
@@ -16,7 +16,8 @@ const AppComponent = (props) => {
               <nav>
                 <Link to="/">TOP</Link>/
                 <Link to="/search">図鑑ナンバー検索</Link>/
-                <Link to="/typesearch">タイプ検索</Link>
+                <Link to="/typesearch">タイプ検索</Link>/
+                <Link to="/searchPartner">相棒ポケモン検索</Link>
               </nav>
             </header>
             <main>
@@ -24,7 +25,9 @@ const AppComponent = (props) => {
             <h1>ポケモン図鑑</h1>
             <hr />
             <Switch>
+
               <Route exact path="/" component={IndexPage} />
+
               <Route path="/search"
                 render={
                   () => <SearchPokemon
@@ -34,6 +37,7 @@ const AppComponent = (props) => {
                   />
                 }
               />
+
               <Route path="/typesearch"
                 render={
                   () => <TypeSearch
@@ -44,15 +48,19 @@ const AppComponent = (props) => {
                   />
                 }
               />
+
+              <Route path="/searchPartner"
+                render={
+                  () => <SearchPartner
+                    decidePartner={props.decidePartner}
+                    resultNo={props.resultNo}
+                    showData={props.showData}
+                  />
+                }
+              />
+
             </Switch>
 
-              {/* <SearchType 
-                decideType={e => this.decideType(e)}
-                resetType={e => this.resetType(e)}
-                normalArray={this.state.normalArray}
-                typeArray={this.state.typeArray}
-                detailData={this.state.detailData}
-              /> */}
 
               {/* <SearchPartner 
                 decidePartner={e => this.decidePartner(e)}
