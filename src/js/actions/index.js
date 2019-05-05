@@ -1,5 +1,5 @@
 import createTypeArray from '../common/createTypeArray'
-import decideResultNo from '../common/decideResultNo'
+import decidePartnerNo from '../common/decidePartnerNo'
 
 export const decidePokemon = (number) => ({
   type: (number < 803 && 0 < number) || number == null ? 'TRUE': 'FALSE',
@@ -9,20 +9,17 @@ export const decidePokemon = (number) => ({
 
 export const decideType = () => {
 
-  const subTypeArray = createTypeArray();
-  console.log('sub', subTypeArray)
+  const typeArray = createTypeArray();
 
   return(
     {
       type: 'TYPE',
-      subTypeArray
+      typeArray
     }
   )
 }
 
 export const showData = (id) => {
-
-  console.log('id', id)
 
   return(
     {
@@ -34,16 +31,12 @@ export const showData = (id) => {
 
 export const decidePartner = () => {
 
-  const resultNo = decideResultNo();
+  const partnerNo = decidePartnerNo();
 
   return(
     {
       type: 'PARTNER',
-      resultNo
+      partnerNo
     }
   )
 }
-
-export const resetType = () => ({
-  type: 'RESET'
-})

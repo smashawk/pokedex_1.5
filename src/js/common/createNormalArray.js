@@ -1,6 +1,5 @@
 import data from '../../data/pokemon_data.json';
 
-
 const normalArray =[];
   
 const createNormalArray = () => {

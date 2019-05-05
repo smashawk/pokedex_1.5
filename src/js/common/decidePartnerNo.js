@@ -1,10 +1,11 @@
 import hiragana from '../../data/hiragana.json';
 
-  const decideResultNo = () => {
+  const decidePartnerNo = () => {
 
     const nameArray = []
     const inputName = document.getElementById('inputName');
     var char = inputName.value;
+
     for(let i = 0; i < inputName.value.length; i++) {
       nameArray.push(char.substr(0,1));
       let j = inputName.value.length - i - 1;
@@ -18,25 +19,21 @@ import hiragana from '../../data/hiragana.json';
           hiraganaNoArray.push(hiragana[j].number);
           break;
         }
-  
       }
-  
     }
-    console.log(hiraganaNoArray);
   
     // 計算
-    let resultNo = 1;
+    let partnerNo = 1;
     for (let i = 0; i < hiraganaNoArray.length; i++) {
-      resultNo *= hiraganaNoArray[i];
+      partnerNo *= hiraganaNoArray[i];
     }
   
-    console.log(resultNo)
-    resultNo = (resultNo + hiraganaNoArray.length) % 802
-    console.log(resultNo)
+    partnerNo = (partnerNo + hiraganaNoArray.length) % 802
     // ここまででポケモン決定
 
-    return resultNo;
+    return partnerNo;
 
   }
 
-export default decideResultNo;
+  
+export default decidePartnerNo;

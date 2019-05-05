@@ -42,7 +42,7 @@ const AppComponent = (props) => {
                   render={
                     () => <SearchType
                       decideType={props.decideType}
-                      subTypeArray={props.subTypeArray}
+                      typeArray={props.typeArray}
                       showData={props.showData}
                       id={props.id}
                     />
@@ -53,7 +53,7 @@ const AppComponent = (props) => {
                   render={
                     () => <SearchPartner
                       decidePartner={props.decidePartner}
-                      resultNo={props.resultNo}
+                      partnerNo={props.partnerNo}
                     />
                   }
                 />

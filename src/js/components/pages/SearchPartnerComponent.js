@@ -136,16 +136,16 @@ const SearchPartner = (props) => {
             <div>
               <dl>
                 <dt>図鑑番号</dt>
-                <dd>{normalArray[props.resultNo].no}</dd>
+                <dd>{normalArray[props.partnerNo].no}</dd>
                 <dt>名前</dt>
-                <dd>{normalArray[props.resultNo].name}</dd>
+                <dd>{normalArray[props.partnerNo].name}</dd>
                 <dt>タイプ</dt>
                 <dd>
-                  <span>{normalArray[props.resultNo].types[0]}</span>
-                  <span>{normalArray[props.resultNo].types[1]}</span>
+                  <span>{normalArray[props.partnerNo].types[0]}</span>
+                  <span>{normalArray[props.partnerNo].types[1]}</span>
                 </dd>
               </dl>
-              <div className={`img imgNo${props.resultNo}`}></div>
+              <div className={`img imgNo${props.partnerNo}`}></div>
             </div>
           </div>
         </div>

@@ -1,10 +1,10 @@
-const subTypeArray = (state = 0, action) => {
+const typeArray = (state = 0, action) => {
   switch (action.type) {
     case 'TYPE':
-      return action.subTypeArray;
+      return action.typeArray;
     default:
       return 0;
   }
 };
 
-export default subTypeArray;
+export default typeArray;

@@ -24,14 +24,14 @@ const SearchType = (props) => {
   //   decideType();
   //   removeTypeText();
   // }
-
+  
   const nodes = [];
-  for(let i = 0; i<props.subTypeArray.length; i++) {
+  for(let i = 0; i<props.typeArray.length; i++) {
     nodes.push(
       <li 
-        key={props.subTypeArray[i].key}
-        id={props.subTypeArray[i].number.no}
-        className={"imgIcon imgType imgNo" + props.subTypeArray[i].number.no}
+        key={props.typeArray[i].key}
+        id={props.typeArray[i].number.no}
+        className={`imgIcon imgType imgNo${props.typeArray[i].number.no}`}
         onClick={e => props.showData(e.target.id)}
       >
       </li>
