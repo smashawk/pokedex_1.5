@@ -1,6 +1,6 @@
 import React from "react";
 // import axios from 'axios';
-import normalArray from '../common/createNormalArray'
+import normalArray from '../../common/createNormalArray'
 
 
 
@@ -136,16 +136,16 @@ const SearchPartner = (props) => {
             <div>
               <dl>
                 <dt>図鑑番号</dt>
-                <dd>{normalArray[Number(props.resultNo)].no}</dd>
+                <dd>{normalArray[props.resultNo].no}</dd>
                 <dt>名前</dt>
-                <dd>{normalArray[Number(props.resultNo)].name}</dd>
+                <dd>{normalArray[props.resultNo].name}</dd>
                 <dt>タイプ</dt>
                 <dd>
-                  <span>{normalArray[Number(props.resultNo)].types[0]}</span>
-                  <span>{normalArray[Number(props.resultNo)].types[1]}</span>
+                  <span>{normalArray[props.resultNo].types[0]}</span>
+                  <span>{normalArray[props.resultNo].types[1]}</span>
                 </dd>
               </dl>
-              <div className={"img imgNo" + props.resultNo}></div>
+              <div className={`img imgNo${props.resultNo}`}></div>
             </div>
           </div>
         </div>

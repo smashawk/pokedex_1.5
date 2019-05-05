@@ -1,5 +1,5 @@
 import React from "react";
-import normalArray from '../common/createNormalArray'
+import normalArray from '../../common/createNormalArray'
 
 const SearchPokemon = (props) => {
 
@@ -30,7 +30,7 @@ const SearchPokemon = (props) => {
             <span>{normalArray[props.number].types[1]}</span>
           </dd>
         </dl>
-        <div className={"img imgNo" + props.number}></div>
+        <div className={`img imgNo${props.number}`}></div>
       </div>
     </section>
 

@@ -1,8 +1,7 @@
 import React from "react";
-import ShowData from './showDataComponent'
-// import createTypeArray from '../common/createTypeArray'
+import normalArray from '../../common/createNormalArray'
 
-const TypeSearch = (props) => {
+const SearchType = (props) => {
 
 
   // const showTypeText = () => {
@@ -25,6 +24,7 @@ const TypeSearch = (props) => {
   //   decideType();
   //   removeTypeText();
   // }
+
   const nodes = [];
   for(let i = 0; i<props.subTypeArray.length; i++) {
     nodes.push(
@@ -88,9 +88,21 @@ const TypeSearch = (props) => {
       {/* <button onClick={e => resetType(e)} className="resetType">タイプリセット</button> */}
     </div>
 
-     <ShowData 
-       id={props.id}
-     />
+    <div className="outputArea">
+      <dl>
+        <dt>図鑑番号</dt>
+        <dd>{normalArray[props.id].no}</dd>
+        <dt>名前</dt>
+        <dd>{normalArray[props.id].name}</dd>
+        <dt>タイプ</dt>
+        <dd>
+          <span>{normalArray[props.id].types[0]}</span>
+          <span>{normalArray[props.id].types[1]}</span>
+        </dd>
+      </dl>
+      <div className={`img imgNo${props.id}`}></div>
+      <div className={`img imgColor imgColorNo${props.id}`}></div>
+    </div>
      
      <div>
        <p id="FnClickTypeText" className="clickTypeText">ポケモンをクリック！</p>
@@ -101,4 +113,4 @@ const TypeSearch = (props) => {
   )
 }
 
-export default TypeSearch;
+export default SearchType;

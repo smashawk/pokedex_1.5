@@ -1,13 +1,13 @@
 import React from 'react';
-import IndexPage from "./indexComponent";
-import SearchPokemon from "./SearchPokemonComponent";
-import TypeSearch from './typeSearchComponent';
-import SearchPartner from './SearchPartnerComponent';
 import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
+import IndexPage from "./pages/IndexComponent";
+import SearchPokemon from "./pages/SearchPokemonComponent";
+import SearchType from './pages/SearchTypeComponent';
+import SearchPartner from './pages/SearchPartnerComponent';
 
 const AppComponent = (props) => {
     
-  console.log('render')
+  console.log('Apprender')
 
       return(
         <BrowserRouter>
@@ -15,66 +15,55 @@ const AppComponent = (props) => {
             <header>
               <nav>
                 <Link to="/">TOP</Link>/
-                <Link to="/search">図鑑ナンバー検索</Link>/
-                <Link to="/typesearch">タイプ検索</Link>/
-                <Link to="/searchPartner">相棒ポケモン検索</Link>
+                <Link to="/pokemon">図鑑ナンバー検索</Link>/
+                <Link to="/type">タイプ検索</Link>/
+                <Link to="/partner">相棒ポケモン検索</Link>
               </nav>
             </header>
             <main>
-              
             <h1>ポケモン図鑑</h1>
             <hr />
-            <Switch>
 
-              <Route exact path="/" component={IndexPage} />
+              <Switch>
 
-              <Route path="/search"
-                render={
-                  () => <SearchPokemon
-                    decidePokemon={props.decidePokemon}
-                    number={props.number}
-                    errorText={props.errorText}
-                  />
-                }
-              />
+                <Route exact path="/" component={IndexPage} />
 
-              <Route path="/typesearch"
-                render={
-                  () => <TypeSearch
-                    decideType={props.decideType}
-                    subTypeArray={props.subTypeArray}
-                    showData={props.showData}
-                    id={props.id}
-                  />
-                }
-              />
+                <Route path="/pokemon"
+                  render={
+                    () => <SearchPokemon
+                      decidePokemon={props.decidePokemon}
+                      number={props.number}
+                      errorText={props.errorText}
+                    />
+                  }
+                />
 
-              <Route path="/searchPartner"
-                render={
-                  () => <SearchPartner
-                    decidePartner={props.decidePartner}
-                    resultNo={props.resultNo}
-                    showData={props.showData}
-                  />
-                }
-              />
+                <Route path="/type"
+                  render={
+                    () => <SearchType
+                      decideType={props.decideType}
+                      subTypeArray={props.subTypeArray}
+                      showData={props.showData}
+                      id={props.id}
+                    />
+                  }
+                />
 
-            </Switch>
+                <Route path="/partner"
+                  render={
+                    () => <SearchPartner
+                      decidePartner={props.decidePartner}
+                      resultNo={props.resultNo}
+                    />
+                  }
+                />
 
-
-              {/* <SearchPartner 
-                decidePartner={e => this.decidePartner(e)}
-                normalArray={this.state.normalArray}
-                resultNo={this.state.resultNo}
-              /> */}
+              </Switch>
 
             </main>
-
           </div>
         </BrowserRouter>
       )
 }
-
-
 
 export default AppComponent;
