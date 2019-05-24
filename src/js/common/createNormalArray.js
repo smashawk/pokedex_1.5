@@ -1,14 +1,9 @@
 import data from '../../data/pokemon_data.json';
 
-const normalArray =[];
+let normalArray =[];
   
-const createNormalArray = () => {
-  for(let i = 0; i<934; i++){
-    if(!(data[i].isMegaEvolution) && !(data[i].form)) {
-      normalArray.push(data[i]);
-    }
-  }
-}
+// 全ポケモンデータが入った配列をつくる（メガシンカと別フォームを除く）
+const createNormalArray = () => normalArray = data.filter(value => !(value.isMegaEvolution) && !(value.form));
 
 createNormalArray();
 
