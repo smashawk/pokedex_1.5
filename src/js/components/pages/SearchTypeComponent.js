@@ -25,6 +25,8 @@ const SearchType = (props) => {
   //   removeTypeText();
   // }
 
+
+  // typeArrayのポケモンDOMを作っておく
   const nodes = props.typeArray.map(value => {
       const node = 
       <li 
