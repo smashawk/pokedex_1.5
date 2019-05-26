@@ -24,19 +24,20 @@ const SearchType = (props) => {
   //   decideType();
   //   removeTypeText();
   // }
-  
-  const nodes = [];
-  for(let i = 0; i<props.typeArray.length; i++) {
-    nodes.push(
+
+  const nodes = props.typeArray.map(value => {
+      const node = 
       <li 
-        key={props.typeArray[i].key}
-        id={props.typeArray[i].number.no}
-        className={`imgIcon imgType imgNo${props.typeArray[i].number.no}`}
+        key={value.key}
+        id={value.number.no}
+        className={`imgIcon imgType imgNo${value.number.no}`}
         onClick={e => props.showData(e.target.id)}
       >
-      </li>
-    );
-  }
+      </li>;
+
+      return node;
+  });
+
 
   return(
     

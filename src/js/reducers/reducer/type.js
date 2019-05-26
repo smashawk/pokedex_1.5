@@ -3,7 +3,7 @@ const typeArray = (state = 0, action) => {
     case 'TYPE':
       return action.typeArray;
     default:
-      return 0;
+      return [];
   }
 };
 
