@@ -32,7 +32,7 @@ const SearchType = (props) => {
       <li 
         key={value.key}
         id={value.number.no}
-        className={`imgIcon imgType imgNo${value.number.no}`}
+        className={`typeIconList__imgIcon typeIconList__imgIcon--imgNo${value.number.no}`}
         onClick={e => props.showData(e.target.id)}
       >
       </li>;
@@ -43,7 +43,7 @@ const SearchType = (props) => {
 
   return(
     
-    <section className="searchSectionType">
+    <section className="contentArea contentArea--searchType">
       <div className="inputArea">
         <h2>2. タイプ検索</h2>
         <select id="typeSelector1" onChange={e => props.decideType(e)}>
@@ -92,24 +92,23 @@ const SearchType = (props) => {
     </div>
 
     <div className="outputArea">
-      <dl>
-        <dt>図鑑番号</dt>
-        <dd>{normalArray[props.id].no}</dd>
-        <dt>名前</dt>
-        <dd>{normalArray[props.id].name}</dd>
-        <dt>タイプ</dt>
-        <dd>
-          <span>{normalArray[props.id].types[0]}</span>
-          <span>{normalArray[props.id].types[1]}</span>
+      <dl className="outputArea__list">
+        <dt className="outputArea__title">図鑑番号</dt>
+        <dd className="outputArea__desc">{normalArray[props.id].no}</dd>
+        <dt className="outputArea__title">名前</dt>
+        <dd className="outputArea__desc">{normalArray[props.id].name}</dd>
+        <dt className="outputArea__title">タイプ</dt>
+        <dd className="outputArea__desc">
+          <span className="outputArea__type">{normalArray[props.id].types[0]}</span>
+          <span className="outputArea__type">{normalArray[props.id].types[1]}</span>
         </dd>
       </dl>
-      <div className={`img imgNo${props.id}`}></div>
-      <div className={`img imgColor imgColorNo${props.id}`}></div>
+      <div className={`outputArea__img outputArea__img--imgNo${props.id}`}></div>
     </div>
      
      <div>
        <p id="FnClickTypeText" className="clickTypeText">ポケモンをクリック！</p>
-       <ul className="typeShowData">{nodes}</ul>
+       <ul className="typeIconList">{nodes}</ul>
      </div>
    </section>
 

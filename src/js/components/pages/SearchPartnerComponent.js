@@ -117,10 +117,10 @@ const SearchPartner = (props) => {
     
     return(
       
-      <section className="searchPartner">
+      <section className="contentArea contentArea--searchPartner">
         <div className="inputArea">
         <h2>3. あなたの相棒ポケモン検索</h2>
-          <p className="inputAreaText">※フルネーム推奨</p>
+          <p className="inputArea__desc">※フルネーム推奨</p>
           <input 
             id="inputName"
             className="inputName"
@@ -134,18 +134,18 @@ const SearchPartner = (props) => {
           <div>
             {/* <p id="partnerText" className="partnerText">{this.state.user.item_list[0].user_name}<span id="partnerSubText" className="partnerSubText">は</span>{this.props.normalArray[Number(this.state.resultNo) - 1].name}にきめた！</p> */}
             <div>
-              <dl>
-                <dt>図鑑番号</dt>
-                <dd>{normalArray[props.partnerNo].no}</dd>
-                <dt>名前</dt>
-                <dd>{normalArray[props.partnerNo].name}</dd>
-                <dt>タイプ</dt>
-                <dd>
-                  <span>{normalArray[props.partnerNo].types[0]}</span>
-                  <span>{normalArray[props.partnerNo].types[1]}</span>
+              <dl className="outputArea__list">
+                <dt className="outputArea__title">図鑑番号</dt>
+                <dd className="outputArea__desc">{normalArray[props.partnerNo].no}</dd>
+                <dt className="outputArea__title">名前</dt>
+                <dd className="outputArea__desc">{normalArray[props.partnerNo].name}</dd>
+                <dt className="outputArea__title">タイプ</dt>
+                <dd className="outputArea__desc">
+                  <span className="outputArea__type">{normalArray[props.partnerNo].types[0]}</span>
+                  <span className="outputArea__type">{normalArray[props.partnerNo].types[1]}</span>
                 </dd>
               </dl>
-              <div className={`img imgNo${props.partnerNo}`}></div>
+              <div className={`outputArea__img outputArea__img--imgNo${props.partnerNo}`}></div>
             </div>
           </div>
         </div>
